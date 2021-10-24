@@ -1,0 +1,8 @@
+! Set depth to make transparency work.
+URxvt*depth: 32
+! URxvt*transparent: true
+URxvt*font: xft:DroidSansMono:antialias=true:size=8, xft:DroidSans
+URxvt*letterSpace: 0
+URxvt*scrollBar: false
+
+XTerm*font: xft:DroidSandMono:antialias=true:size=8, xft:Font Awesome:minspace=False
