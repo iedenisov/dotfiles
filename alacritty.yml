@@ -23,7 +23,9 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
+  opacity: 0.8
+
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -114,7 +116,7 @@ font:
     family: Liberation Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Bold
 
   # Bold font face
   #bold:
@@ -150,7 +152,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 8.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -176,10 +178,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
+#colors:
   # Default colors
-  primary:
-    background: '#000000'
+  #primary:
+    #background: '#000000'
+    #transparent_background_colors: false
   #  foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
@@ -357,7 +360,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.75
+#background_opacity: 0.75opacity: 0.75
 
 #selection:
   # This string contains all characters that are used as separators for
