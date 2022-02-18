@@ -38,7 +38,7 @@ three-alt = ${xrdb:color6}
 four = ${xrdb.color4}
 
 [bar/ivan]
-monitor = DP-5
+;monitor = DP-5
 width = 100%
 height = 20
 ;offset-x = 5
@@ -65,7 +65,7 @@ font-2 = siji:pixelsize=10:antialias=true;1
 
 modules-left = wlan eth i3
 modules-center = date
-modules-right = filesystem alsa xkeyboard powermenu
+modules-right = filesystem pulseaudio xbacklight xkeyboard  powermenu
 
 module-margin = 0
 separator = " "
@@ -126,7 +126,7 @@ format-mounted-prefix-foreground = ${colors.foreground-alt}
 format-mounted-prefix-background = ${colors.zero}
 format-mounted-prefix-underline = ${colors.one-alt}
 
-label-mounted =  %free% 
+label-mounted =  %mountpoint% %free% 
 label-mounted-background = ${colors.zero}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
@@ -213,8 +213,12 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label>
+format-background = ${colors.zero}
+format-underline = ${colors.three-alt}
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
 # <bar>
-label = BL %percentage%%
+label = %percentage%%
 
 bar-width = 10
 bar-indicator = |
@@ -306,11 +310,33 @@ label-padding = 2
 [module/pulseaudio]
 type = internal/pulseaudio
 
-label-volume = VL %percentage%%
-label-volume-foreground = ${root.foreground}
+interval = 5
+use-ui-max = false
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
+format-volume = <label-volume>
+format-volume-prefix = ""
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume-underline = ${colors.two-alt}
+
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+label-volume-background = ${colors.zero}
+
+format-muted-prefix = " "
+format-muted-background = ${colors.zero}
+format-muted-foreground = ${colors.foreground-alt}
+format-volume-background = ${colors.zero}
+format-muted-underline = ${colors.two-alt}
+
+label-muted = MUTE
+label-muted-foreground = ${colors.foreground-alt}
+label-muted-background = ${colors.zero}
+
+;label-volume = VL %percentage%%
+;label-volume-foreground = ${root.foreground}
+
+;label-muted = 🔇 muted
+;label-muted-foreground = #666
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -332,8 +358,11 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/alsa]
 type = internal/alsa
 
+interval = 5
+
 format-volume = <label-volume>
 format-volume-prefix = ""
+format-volume-prefix-foreground = ${colors.foreground-alt}
 format-volume-underline = ${colors.two-alt}
 
 label-volume = %percentage%%

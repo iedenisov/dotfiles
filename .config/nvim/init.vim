@@ -1,8 +1,14 @@
 set mouse=a
 set number
-set tabstop=2
-set shiftwidth=2
+
+" Indentation
+set autoindent
 set expandtab
+set shiftround
+set shiftwidth=4
+set smarttab
+set tabstop=4
+
 set clipboard+=unnamedplus
 
 set splitbelow
