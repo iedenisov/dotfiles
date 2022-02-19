@@ -10,11 +10,10 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 #exec /home/ivan/.screenlayout/fluffyDualMon.sh
-exec bash /home/ivan/.xprofile
+exec bash $HOME/.xprofile
 exec wal -R
 
 # Launch polybar
-#exec_always --no-startup-id killall polybar; polybar -r ivan; polybar -r VGA1 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec_always picom
