@@ -81,15 +81,10 @@ title_align center
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Use pactl to adjust volume in PulseAudio.
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
-#bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 10
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 10
-#bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute
-#bindsym XF86AudioMicMute exec --no-startup-id pulseaudio-ctl mute-input
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Adjust screen backlight (brightness)
 #bindsym XF86MonBrightnessUp exec --no-startup-id  "xbacklight -inc 10"
