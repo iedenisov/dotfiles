@@ -20,6 +20,6 @@ let g:netrw_altv = 1
 
 " Bindings
 nnoremap <Up> gk
-inoremap <Up> gk
+inoremap <Up> <C-o>gk
 nnoremap <Down> gj
-inoremap <Down> gj
+inoremap <Down> <C-o>gj
