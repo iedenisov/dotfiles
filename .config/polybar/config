@@ -65,7 +65,7 @@ font-2 = siji:pixelsize=10:antialias=true;1
 
 modules-left = wlan eth i3
 modules-center = date
-modules-right = filesystem pulseaudio xbacklight xkeyboard  powermenu
+modules-right = battery filesystem pulseaudio xbacklight xkeyboard  powermenu
 
 module-margin = 0
 separator = " "
@@ -394,7 +394,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ACAD
 full-at = 98
 
