@@ -86,7 +86,7 @@ bindsym $mod+shift+Return exec urxvt
 
 # Start web-browser (Firefox)
 bindsym $mod+w exec firefox
-bindsym $mod+shift+w exec google-chrome-stable
+bindsym $mod+shift+w exec chromium
 
 # Start Nemo (file browser)
 bindsym $mod+b exec nemo
