@@ -20,3 +20,6 @@ source /usr/share/nvm/init-nvm.sh
 # Load Simple Ruby Version Management (rbenv)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Load SFDX CLI
+PATH=~/sfdx/bin:$PATH
