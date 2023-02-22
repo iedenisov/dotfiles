@@ -74,8 +74,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Adjust screen backlight (brightness)
-bindsym XF86MonBrightnessUp exec --no-startup-id  "xbacklight -inc 10"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
+bindsym XF86MonBrightnessUp exec --no-startup-id  "light -A 10"
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -85,7 +85,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+shift+Return exec urxvt
 
 # Start web-browser (Firefox)
-bindsym $mod+w exec firefox
+bindsym $mod+w exec firefox -P
 bindsym $mod+shift+w exec chromium
 
 # Start Nemo (file browser)
