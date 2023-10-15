@@ -1,10 +1,10 @@
 exec bash $HOME/.xprofile
 exec_always wal -R
 
+exec_always picom
+
 # Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-exec_always picom
 
 #exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -23,6 +23,12 @@ exec pasystray
 
 # redhshift frontend
 exec redshift-gtk
+
+# qbittorrent
+exec qbittorrent
+
+# flameshot
+exec flameshot
 
 ## i3 settings
 set $mod Mod4
@@ -45,7 +51,6 @@ client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $un  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
 client.background       $bg
 
 # PROTIP: You can also dynamically set dmenu's colors this way:
@@ -101,7 +106,7 @@ bindsym $mod+p exec steam
 bindsym $mod+shift+p exec lutris
 
 # Start Deepin Screenshot (take a screenshot)
-bindsym Print exec xfce4-screenshooter
+bindsym Print exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill

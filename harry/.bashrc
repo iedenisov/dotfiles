@@ -22,4 +22,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Load SFDX CLI
-PATH=~/sfdx/bin:$PATH
+export PATH=~/sfdx/bin:$PATH
+
+export PATH=/home/jrknsoff/.opam/default/bin:/home/jrknsoff/sfdx/bin:/home/jrknsoff/.rbenv/shims:/home/jrknsoff/.rbenv/bin:/home/jrknsoff/.nvm/versions/node/v18.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$PATH
