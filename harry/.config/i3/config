@@ -1,5 +1,6 @@
 exec bash $HOME/.xprofile
-exec_always wal -R
+
+exec wal -R
 
 exec_always picom
 
@@ -86,8 +87,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+shift+Return exec urxvt
+bindsym $mod+Return exec alacritty --config-file ~/.config/alacritty/alacritty.yml -e zsh -c "cat ~/.config/wpg/sequences && zsh"
+bindsym $mod+shift+Return exec alacritty --config-file ~/.config/alacritty/alacritty-static-colorscheme.yml
 
 # Start web-browser (Firefox)
 bindsym $mod+w exec firefox -P
