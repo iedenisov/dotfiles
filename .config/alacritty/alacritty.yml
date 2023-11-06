@@ -422,10 +422,11 @@ font:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: echo
-#  args:
-#    - "HELLO "
+shell:
+  program: /bin/zsh
+  args:
+    - -c
+    - "cat ~/.config/wpg/sequences && zsh"
 
 # Startup directory
 #
