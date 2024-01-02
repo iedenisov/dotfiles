@@ -1,0 +1,17 @@
+import = [
+    "~/..config/alacritty/thhemes/themes/gruvbox_dark.toml"
+]
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Noto Sans Mono Medium"
+style = "Normal"
+
+[shell]
+args = ["-c", "cat ~/.config/wpg/sequences && zsh"]
+program = "/bin/zsh"
+
+[window]
+opacity = 0.9
