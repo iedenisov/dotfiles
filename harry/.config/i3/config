@@ -1,5 +1,4 @@
 exec bash $HOME/.xprofile
-exec emacs --daemon
 
 exec wal -R
 
