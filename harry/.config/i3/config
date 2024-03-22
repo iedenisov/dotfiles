@@ -1,8 +1,6 @@
 exec bash $HOME/.xprofile
-
-exec wal -R
-
 exec_always picom
+exec wal -R
 
 # Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -92,7 +90,7 @@ bindsym $mod+shift+Return exec alacritty --config-file ~/.config/alacritty/alacr
 
 # Start web-browser (Firefox)
 bindsym $mod+w exec firefox -P
-bindsym $mod+shift+w exec chromium
+bindsym $mod+shift+w exec google-chrome-stable
 
 # Start Nemo (file browser)
 bindsym $mod+b exec nemo
