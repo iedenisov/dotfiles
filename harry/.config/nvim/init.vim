@@ -28,7 +28,7 @@ inoremap <Down> <C-o>gj
 
 "" Built-in terminal emulator
 " Exit terminal mode with <Esc>
-:tnoremap <Esc> <C-\><C-n>
+:tnoremap <\><Esc> <C-\><C-n>
 
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/personalwiki/', 'name': 'Personal Wiki', 'syntax': 'markdown', 'ext': '.md'}]
