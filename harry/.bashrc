@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Make wpgtk apply the colorscheme to new terminals
-(cat $HOME/.config/wpg/sequences &)
+# (cat $HOME/.config/wpg/sequences &)
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '

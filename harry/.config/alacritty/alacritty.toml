@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/themes/themes/blood_moon.toml"
+    "~/.config/alacritty/themes/themes/nightfox.toml"
 ]
 
 [font]
@@ -10,7 +10,7 @@ family = "Noto Sans Mono Medium"
 style = "Normal"
 
 [shell]
-args = ["-c", "cat ~/.config/wpg/sequences && zsh"]
+# args = ["-c", "cat ~/.config/wpg/sequences && zsh"]
 program = "/bin/zsh"
 
 [window]
