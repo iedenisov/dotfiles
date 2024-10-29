@@ -1,3 +1,4 @@
+exec dropbox
 exec bash $HOME/.xprofile
 exec_always picom
 exec wal -R
