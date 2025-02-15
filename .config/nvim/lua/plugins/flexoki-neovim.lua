@@ -1,4 +1,4 @@
 return {
-    "rebelot/kanagawa.nvim",
+    "kepano/flexoki-neovim",
     lazy = false,
 }

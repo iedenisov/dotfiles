@@ -1,84 +1,51 @@
--- mouse
-vim.o.mouse = "a"
+require("config.lazy");
 
--- line number
-vim.o.number = true
-vim.o.relativenumber = true
+vim.cmd("colorscheme edge");
 
--- spellcheck
-vim.o.spell = true
-vim.o.spelllang = 'en,ru,de'
+-- line and column highlighting
+vim.o.cursorline = true;
+vim.o.cursorcolumn = true;
+
+vim.o.mouse = 'a';
+vim.o.number = true;
+vim.o.relativenumber = true;
 
 -- indentation
-vim.o.autoindent = true
-vim.o.expandtab = true
-vim.o.shiftround = true
-vim.o.shiftwidth = 2
-vim.o.smarttab = true
-vim.o.tabstop = 2
+vim.o.autoindent = true;
+vim.o.expandtab = true;
+vim.o.shiftround = true;
+vim.o.shiftwidth = 4
+vim.o.smarttab = true;
+vim.o.tabstop = 4;
 
-vim.o.wrap = true
-vim.o.linebreak = true
+vim.o.wrap = true;
+vim.o.linebreak = true;
 
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = 'unnamedplus';
 
-vim.o.splitbelow = true
-vim.g.netrw_banner = false
-vim.g.netrw_altv = true
+vim.o.splitbelow = true;
 
--- folds
--- vim.o.foldmethod = 'indent'
--- vim.o.foldcolumn = '3'
--- 
--- -- save on leaving buffers and windows
--- vim.api.nvim_create_autocmd('BufWinLeave', {
---   command = 'silent! :mkview'
--- })
--- 
--- -- apply on entering buffers and windows
--- vim.api.nvim_create_autocmd('BufWinEnter', {
---   command = ':silent! loadview'
--- })
+-- spelling
+vim.o.spell = true;
+vim.o.spelllang = "en,ru,de";
+
 
 -- bindings
-vim.g.mapleader = " "
-vim.g.mapllleader = " "
+vim.keymap.set('n', '<Up>', 'gk');
+vim.keymap.set('i', '<Up>', '<C-o>gk');
+vim.keymap.set('n', '<Down>', 'gj');
+vim.keymap.set('i', '<Down>', '<C-o>gj');
+vim.keymap.set('n', '<leader>i', function() vim.diagnostic.open_float() end);
+vim.keymap.set('n', '<leader>cl', function() vim.cmd('set background=light') end);
+vim.keymap.set('n', '<leader>cd', function() vim.cmd('set background=dark') end);
+vim.keymap.set('n', '<leader>cc', function () if vim.o.background == 'dark' then vim.cmd('set background=light') elseif vim.o.background == 'light' then vim.cmd('set background=dark') end end);
+vim.keymap.set('n', '<leader>e', function () vim.cmd('Ex') end);
 
-vim.keymap.set('n', '<Up>', 'gk')
-vim.keymap.set('i', '<Up>', '<C-o>gk')
-vim.keymap.set('n', '<Down>', 'gj')
-vim.keymap.set('i', '<Down>', '<C-o>gj')
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup(
-  {
-    {import = 'plugins'},
-    {import = 'plugins.lsp'},
-  }
-)
-
--- colorscheme
-vim.cmd("colorscheme zenbones");
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = {"TelescopeResults"},
-  command = "setlocal nofoldenable"
-})
-
+-- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'Telescope colorscheme' })
