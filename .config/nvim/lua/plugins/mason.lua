@@ -18,6 +18,7 @@ return {
                 'pyright',
                 'ts_ls',
                 'volar',
+                'markdown_oxide',
             },
             automatic_installation = true,
         })

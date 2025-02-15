@@ -1,5 +1,6 @@
 require("config.lazy");
 
+vim.cmd("set background=dark");
 vim.cmd("colorscheme edge");
 
 -- line and column highlighting

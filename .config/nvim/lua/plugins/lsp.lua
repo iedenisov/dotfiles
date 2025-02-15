@@ -28,6 +28,7 @@ return {
         lspconfig.jdtls.setup{}
         lspconfig.lua_ls.setup{}
         lspconfig.pyright.setup{}
+        lspconfig.markdown_oxide.setup{}
         lspconfig.ts_ls.setup{}
         lspconfig.volar.setup{}
     end,
