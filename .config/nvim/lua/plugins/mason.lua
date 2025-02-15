@@ -11,13 +11,13 @@ return {
 
         mason_lspconfig.setup({
             ensure_installed = {
-                'ts_ls',
-                'html',
                 'cssls',
+                'html',
+                'jdtls',
                 'lua_ls',
-                'apex_ls',
                 'pyright',
-                'jdtls'
+                'ts_ls',
+                'volar',
             },
             automatic_installation = true,
         })
