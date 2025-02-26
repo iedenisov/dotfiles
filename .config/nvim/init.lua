@@ -1,4 +1,4 @@
-require("config.lazy");
+require("config.lazy")
 
 vim.cmd("set background=dark");
 vim.cmd("colorscheme edge");
@@ -24,7 +24,8 @@ vim.o.linebreak = true;
 
 vim.o.clipboard = 'unnamedplus';
 
-vim.o.splitbelow = true;
+-- netrw
+vim.g.netrw_liststyle = 3;
 
 -- spelling
 vim.o.spell = true;
