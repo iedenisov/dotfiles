@@ -25,7 +25,11 @@ return {
 
         lspconfig.cssls.setup{}
         lspconfig.html.setup{}
-        lspconfig.jdtls.setup{}
+        lspconfig.jdtls.setup{
+            -- cmd = { '/home/ivdenisov/jdtls/bin/jdtls' },
+            -- configuration = { '/home/ivdenisov/jdtls/config_linux' },
+            -- files = { 'java' },
+        }
         lspconfig.lua_ls.setup{}
         lspconfig.pyright.setup{}
         lspconfig.markdown_oxide.setup{}
