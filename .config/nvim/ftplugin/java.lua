@@ -9,7 +9,7 @@ local config = {
     cmd = {'/home/ivdenisov/jdtls/bin/jdtls'},
     -- cmd = {
     -- 'java', \
-    -- '-jar', vim.fn.glob(home .. 'ecliplse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/'), \
+    -- '-jar', vim.fn.glob(home .. 'jdtls/plugins/org.eclipse.equinox.launcher_*.jar'), \
     -- },
     root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
     settings = {
