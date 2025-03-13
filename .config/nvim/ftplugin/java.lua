@@ -24,8 +24,7 @@ local config = {
                     'sun.*',
                     'org.springframework.*',
                     'lombok.*',
-                    'org.springframework.*',
-                    'lombok.*',
+                    'import com.atlassian.*',
                 },
                 filteredTypes = {
                     'com.sun.*',
@@ -36,6 +35,7 @@ local config = {
                     'sun.*',
                     'org.springframework.*',
                     'lombok.*',
+                    'import com.atlassian.*',
                 }
             },
             eclipse = {

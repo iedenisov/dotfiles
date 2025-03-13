@@ -25,11 +25,14 @@ vim.o.linebreak = true;
 vim.o.clipboard = 'unnamedplus';
 
 -- netrw
-vim.g.netrw_liststyle = 3;
+vim.g.netrw_liststyle = 1;
+vim.g.netrw_sort_by = 'exten';
+vim.g.netrw_alto = 1;
+vim.g.netrw_altv = 1;
 
 -- spelling
 vim.o.spell = true;
-vim.o.spelllang = "en,ru,de";
+vim.o.spelllang = 'en,ru,de';
 
 
 -- bindings
