@@ -13,7 +13,7 @@ return {
             ensure_installed = {
                 'cssls',
                 'html',
-                'jdtls',
+                -- 'jdtls',
                 'lua_ls',
                 'pyright',
                 'ts_ls',
