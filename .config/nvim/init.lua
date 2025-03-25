@@ -1,7 +1,7 @@
 require("config.lazy")
 
 vim.cmd("set background=dark");
-vim.cmd("colorscheme edge");
+vim.cmd("colorscheme tokyonight-moon");
 
 -- line and column highlighting
 vim.o.cursorline = true;
@@ -26,7 +26,7 @@ vim.o.clipboard = 'unnamedplus';
 
 -- netrw
 vim.g.netrw_liststyle = 1;
-vim.g.netrw_sort_by = 'exten';
+vim.g.netrw_sort_by = 'name';
 vim.g.netrw_alto = 1;
 vim.g.netrw_altv = 1;
 
