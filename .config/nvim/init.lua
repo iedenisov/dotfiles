@@ -25,14 +25,18 @@ vim.o.linebreak = true;
 vim.o.clipboard = 'unnamedplus';
 
 -- netrw
-vim.g.netrw_liststyle = 1;
+-- vim.g.netrw_liststyle = 1;
 vim.g.netrw_sort_by = 'name';
 vim.g.netrw_alto = 1;
 vim.g.netrw_altv = 1;
+vim.g.netrw_banner = 0;
 
 -- spelling
 vim.o.spell = true;
 vim.o.spelllang = 'en,ru,de';
+
+-- wildmenu
+vim.o.wildmode = 'longest:full,full';
 
 
 -- bindings
@@ -44,7 +48,8 @@ vim.keymap.set('n', '<leader>i', function() vim.diagnostic.open_float() end);
 vim.keymap.set('n', '<leader>cl', function() vim.cmd('set background=light') end);
 vim.keymap.set('n', '<leader>cd', function() vim.cmd('set background=dark') end);
 vim.keymap.set('n', '<leader>cc', function () if vim.o.background == 'dark' then vim.cmd('set background=light') elseif vim.o.background == 'light' then vim.cmd('set background=dark') end end);
-vim.keymap.set('n', '<leader>e', function () vim.cmd('Ex') end);
+vim.keymap.set('n', '<leader>ee', function () vim.cmd('Ex') end);
+vim.keymap.set('n', '<leader>ev', function () vim.cmd('Vex') end);
 
 
 -- telescope
