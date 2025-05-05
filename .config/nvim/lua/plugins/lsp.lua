@@ -10,6 +10,7 @@ return {
         local root_dir = require('jdtls.setup').find_root(root_markers)
         local workspace_dir = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
+        -- lspconfig.jdtls.setup{}
         lspconfig.jdtls.setup{
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
             cmd = {
