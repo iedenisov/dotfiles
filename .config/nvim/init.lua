@@ -26,17 +26,17 @@ vim.o.clipboard = 'unnamedplus';
 
 -- netrw
 -- vim.g.netrw_liststyle = 1;
-vim.g.netrw_banner = 0;
 vim.g.netrw_sort_by = 'name';
 vim.g.netrw_alto = 1;
 vim.g.netrw_altv = 1;
-vim.g.netrw_sort_by_options = "in";
--- vim.g.ranger_map_keys = 0;
--- vim.g.ranger_replace_netrw = 1;
+vim.g.netrw_banner = 0;
 
 -- spelling
 vim.o.spell = true;
 vim.o.spelllang = 'en,ru,de';
+
+-- wildmenu
+vim.o.wildmode = 'longest:full,full';
 
 
 -- bindings
