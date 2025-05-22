@@ -10,7 +10,13 @@ return {
 
         telescope.setup({
             defaults = {
-                layout_strategy = 'vertical',
+                layout_strategy = 'horizontal',
+                layout_config = {
+                    height = 0.99,
+                    width = 0.99,
+                    preview_width = 0.6
+                },
+                wrap_results = true,
             },
             pickers = {
                 find_files = {

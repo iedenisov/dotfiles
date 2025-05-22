@@ -91,5 +91,8 @@ return {
         lspconfig.markdown_oxide.setup{}
         lspconfig.ts_ls.setup{}
         lspconfig.volar.setup{}
+        lspconfig.groovyls.setup{
+            cmd = { "java", "-jar", home .. "/groovy-language-server/build/libs/groovy-language-server-all.jar" }
+        }
     end,
 }

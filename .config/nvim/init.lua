@@ -66,3 +66,10 @@ vim.keymap.set('n', '<leader>fc', builtin.lsp_incoming_calls, { desc = 'Telescop
 vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, { desc = 'Telescope find outgoing calls (LSP)'})
 vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, { desc = 'Telescope find implementations (LSP)'})
 vim.keymap.set('n', '<leader>fx', builtin.diagnostics, { desc = 'Telescope find errors (LSP)'})
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "TelescopePreviewerLoaded",
+  callback = function()
+    vim.wo.wrap = true
+  end,
+})
