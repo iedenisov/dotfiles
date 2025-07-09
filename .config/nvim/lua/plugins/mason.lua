@@ -13,11 +13,9 @@ return {
             ensure_installed = {
                 'cssls',
                 'html',
-                -- 'jdtls',
                 'lua_ls',
                 'pyright',
                 'ts_ls',
-                'volar',
                 'markdown_oxide',
             },
             automatic_installation = true,
