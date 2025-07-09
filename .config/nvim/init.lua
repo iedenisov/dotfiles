@@ -50,6 +50,7 @@ vim.keymap.set('n', '<leader>cd', function() vim.cmd('set background=dark') end)
 vim.keymap.set('n', '<leader>cc', function () if vim.o.background == 'dark' then vim.cmd('set background=light') elseif vim.o.background == 'light' then vim.cmd('set background=dark') end end);
 vim.keymap.set('n', '<leader>ee', function () vim.cmd('Ex') end);
 vim.keymap.set('n', '<leader>ev', function () vim.cmd('Vex') end);
+vim.keymap.set('n', '<c-w>N', function () vim.cmd('vne') end);
 
 
 -- telescope
@@ -66,6 +67,8 @@ vim.keymap.set('n', '<leader>fc', builtin.lsp_incoming_calls, { desc = 'Telescop
 vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, { desc = 'Telescope find outgoing calls (LSP)'})
 vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, { desc = 'Telescope find implementations (LSP)'})
 vim.keymap.set('n', '<leader>fx', builtin.diagnostics, { desc = 'Telescope find errors (LSP)'})
+
+vim.keymap.set('v', '<leader>to', function() return ':!echo "$(cat)" > ' .. vim.fn.input("Filename: ") .. "<cr>" end, { expr = true });
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "TelescopePreviewerLoaded",
