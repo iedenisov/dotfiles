@@ -38,6 +38,10 @@ vim.o.spelllang = 'en,ru,de';
 -- wildmenu
 vim.o.wildmode = 'longest:full,full';
 
+-- smartcase support
+vim.o.ignorecase = true;
+vim.o.smartcase = true;
+
 
 -- bindings
 vim.keymap.set('n', '<Up>', 'gk');
