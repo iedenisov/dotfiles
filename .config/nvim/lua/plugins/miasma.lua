@@ -1,4 +1,4 @@
 return {
-    "sainnhe/edge",
+    "xero/miasma.nvim",
     lazy = false,
 }

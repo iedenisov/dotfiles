@@ -27,7 +27,12 @@ local config = {
     root_dir = root_dir,
     settings = {
         java = {
-            signatureHelp = { enabled = true },
+            signatureHelp = {
+                enabled = true,
+                description = {
+                    enabled = true
+                }
+            },
             contentProvider = { preferred = "fernflower" },
             import = {
                 maven = {
@@ -42,11 +47,18 @@ local config = {
             eclipse = {
                 downloadSources = true
             },
+            jdt = {
+                ls = {
+                    lombokSupport = {
+                        enabled = true
+                    }
+                }
+            },
             maven = {
                 downloadSources = true
             },
             references = {
-                includeDecompiledSources = true,
+                includeDecompiledSources = true
             },
             sources = {
                 organizeImports = {
@@ -64,25 +76,28 @@ local config = {
                     },
                     useBlocks = true,
                 },
-                configuration = {
-                    runtimes = {
-                        {
-                            name = "JavaSE-1.8",
-                            path = home .. "/.jbang/cache/jdks/8"
-                        },
-                        {
-                            name = "JavaSE-11",
-                            path = home .. "/.jbang/cache/jdks/11"
-                        },
-                        {
-                            name = "JavaSE-17",
-                            path = home .. "/.jbang/cache/jdks/17"
-                        },
-                        {
-                            name = "JavaSE-21",
-                            path = home .. "/.jbang/cache/jdks/21"
-                        },
-                    }
+            },
+            configuration = {
+                maven = {
+                    globalSettings = "/usr/share/atlassian-plugin-sdk-8.2.8/apache-maven-3.5.4/conf/settings.xml"
+                },
+                runtimes = {
+                    {
+                        name = "JavaSE-1.8",
+                        path = home .. "/.jbang/cache/jdks/8"
+                    },
+                    {
+                        name = "JavaSE-11",
+                        path = home .. "/.jbang/cache/jdks/11"
+                    },
+                    {
+                        name = "JavaSE-17",
+                        path = home .. "/.jbang/cache/jdks/17"
+                    },
+                    {
+                        name = "JavaSE-21",
+                        path = home .. "/.jbang/cache/jdks/21"
+                    },
                 }
             },
             project = {

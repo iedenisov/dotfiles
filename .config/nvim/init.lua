@@ -1,7 +1,7 @@
 require("config.lazy")
 
 vim.cmd("set background=dark");
-vim.cmd("colorscheme tokyonight-moon");
+vim.cmd("colorscheme everforest");
 
 -- line and column highlighting
 vim.o.cursorline = true;
@@ -72,7 +72,7 @@ vim.keymap.set('n', '<leader>fo', builtin.lsp_outgoing_calls, { desc = 'Telescop
 vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, { desc = 'Telescope find implementations (LSP)'})
 vim.keymap.set('n', '<leader>fx', builtin.diagnostics, { desc = 'Telescope find errors (LSP)'})
 
-vim.keymap.set('v', '<leader>to', function() return ':!echo "$(cat)" > ' .. vim.fn.input("Filename: ") .. "<cr>" end, { expr = true });
+vim.keymap.set('v', '<leader>to', function() return ':!echo "$(cat)" >> ' .. vim.fn.input("Filename: ") .. "<cr>" end, { expr = true });
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "TelescopePreviewerLoaded",
