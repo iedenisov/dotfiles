@@ -1,6 +1,7 @@
 exec bash $HOME/.xprofile
 exec_always picom
-exec wal -R
+exec_always xrdb ~/.Xresources
+exec_always ~/.fehbg
 
 # Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -39,12 +40,8 @@ set $mod Mod4
 focus_follows_mouse no
 
 # Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources for some reason.
 set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wn.color1 #f0f0f0
+set_from_resource $bg i3wm.color1 #f0f0f0
 set_from_resource $un i3wm.color0
 
 # class                 border  backgr. text indicator child_border
@@ -127,14 +124,24 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 # move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
