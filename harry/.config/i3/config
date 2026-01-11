@@ -93,7 +93,7 @@ bindsym $mod+w exec firefox -P
 bindsym $mod+shift+w exec google-chrome-stable
 
 # Start Nemo (file browser)
-bindsym $mod+b exec nemo
+bindsym $mod+g exec nemo
 
 # Start Telegram Desktop (messenger)
 bindsym $mod+m exec telegram-desktop
@@ -141,7 +141,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+g split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
