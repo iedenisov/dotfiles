@@ -1,10 +1,74 @@
-Xcursor.size: 9
+! Wallust X resources template
+! You can use this template by adding the following to wallust.toml:
+! xres = { src = "Xresources", dst = "~/.config/Xresources" }
+! And to apply it to your X enviroment, you do:
+! xrdb -merge -quiet ~/.config/Xresources
 
-!Set depth to make transparency work.
+*foreground:        #F9E4BC
+*background:        #030016
+*.foreground:       #F9E4BC
+*.background:       #030016
+emacs*foreground:   #F9E4BC
+emacs*background:   #030016
+URxvt*foreground:   #F9E4BC
+XTerm*foreground:   #F9E4BC
+UXTerm*foreground:  #F9E4BC
+! To determine the opacity you use [], (e.g. '[80]#FFFFFF')
+URxvt*background:   [100]#030016
+XTerm*background:   #030016
+UXTerm*background:  #030016
+URxvt*cursorColor:  #B88C7B
+XTerm*cursorColor:  #B88C7B
+UXTerm*cursorColor: #B88C7B
+URxvt*borderColor:  [100]#030016
+
+! Colors 0-15.
+*.color0: #030016
+*color0:  #030016
+*.color1: #0D1C60
+*color1:  #0D1C60
+*.color2: #58282B
+*color2:  #58282B
+*.color3: #5C5C78
+*color3:  #5C5C78
+*.color4: #626450
+*color4:  #626450
+*.color5: #9A6B62
+*color5:  #9A6B62
+*.color6: #B28530
+*color6:  #B28530
+*.color7: #EED097
+*color7:  #EED097
+*.color8: #A7916A
+*color8:  #A7916A
+*.color9: #112680
+*color9:  #112680
+*.color10: #76353A
+*color10:  #76353A
+*.color11: #7A7AA0
+*color11:  #7A7AA0
+*.color12: #83856A
+*color12:  #83856A
+*.color13: #CE8E82
+*color13:  #CE8E82
+*.color14: #EEB140
+*color14:  #EEB140
+*.color15: #EED097
+*color15:  #EED097
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #030016
+*color66:  #030016
+
+! Xclock colors.
+XClock*foreground: #F9E4BC
+XClock*background: #030016
+! rgba xres expects a HEXA color like `00/11/22/FF` there the last bit is the alpha in hex.
+XClock*majorColor:  rgba:ee/d0/97/FF
+XClock*minorColor:  rgba:ee/d0/97/FF
+XClock*hourColor:   rgba:ee/d0/97/FF
+XClock*minuteColor: rgba:ee/d0/97/FF
+XClock*secondColor: rgba:ee/d0/97/FF
+
+! Set depth to make transparency work.
 URxvt*depth: 32
-! URxvt*transparent: true
-URxvt*font: xft:DroidSansMono:antialias=true:size=8, xft:DroidSans
-URxvt*letterSpace: 0
-URxvt*scrollBar: false
-
-XTerm*font: xft:DroidSandMono:antialias=true:size=8, xft:Font Awesome:minspace=False
