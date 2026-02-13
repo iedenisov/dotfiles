@@ -42,7 +42,6 @@ vim.o.wildmode = 'longest:full,full';
 vim.o.ignorecase = true;
 vim.o.smartcase = true;
 
-
 -- bindings
 vim.keymap.set('n', '<Up>', 'gk');
 vim.keymap.set('i', '<Up>', '<C-o>gk');
@@ -55,7 +54,6 @@ vim.keymap.set('n', '<leader>cc', function () if vim.o.background == 'dark' then
 vim.keymap.set('n', '<leader>ee', function () vim.cmd('Ex') end);
 vim.keymap.set('n', '<leader>ev', function () vim.cmd('Vex') end);
 vim.keymap.set('n', '<c-w>N', function () vim.cmd('vne') end);
-
 
 -- telescope
 local builtin = require('telescope.builtin')
