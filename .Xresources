@@ -1,4 +1,4 @@
-Xcursor.size: 14
+Xcursor.size: 9
 
 !Set depth to make transparency work.
 URxvt*depth: 32
