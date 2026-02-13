@@ -1,6 +1,6 @@
 exec bash $HOME/.xprofile
-exec_always wal -R
-exec_always xrdb ~/.Xresources
+# exec_always wal -R
+exec_always xrdb -merge ~/.Xresources
 exec_always ~/.fehbg
 
 exec_always --no-startup-id ~/.screenlayout/default.sh
