@@ -1,5 +1,9 @@
 exec bash $HOME/.xprofile
 exec_always wal -R
+exec_always xrdb ~/.Xresources
+exec_always ~/.fehbg
+
+exec_always --no-startup-id ~/.screenlayout/default.sh
 
 # Launch polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -89,7 +93,7 @@ bindsym $mod+w exec firefox
 bindsym $mod+shift+w exec google-chrome-stable
 
 # Start Nemo (file browser)
-bindsym $mod+b exec nemo
+bindsym $mod+g exec nemo
 
 # Start Telegram Desktop (messenger)
 bindsym $mod+m exec telegram-desktop
@@ -115,10 +119,10 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-# bindsym $mod+h focus left
-# bindsym $mod+j focus down
-# bindsym $mod+k focus up
-# bindsym $mod+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -139,7 +143,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
