@@ -28,6 +28,9 @@ exec pasystray
 # redhshift frontend
 exec redshift-gtk
 
+# qbittorrent
+exec qbittorrent
+
 ## i3 settings
 set $mod Mod4
 
