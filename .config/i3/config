@@ -106,7 +106,7 @@ bindsym $mod+p exec steam
 bindsym $mod+shift+p exec lutris
 
 # Start Deepin Screenshot (take a screenshot)
-bindsym Print exec xfce4-screenshooter
+bindsym Print exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill
