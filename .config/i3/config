@@ -86,8 +86,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+shift+Return exec urxvt
+bindsym $mod+Return exec alacritty --config-file ~/.config/alacritty/alacritty.toml
+bindsym $mod+shift+Return exec alacritty --config-file ~/.config/alacritty/alacritty_static_colorscheme.toml
 
 # Start web-browser (Firefox)
 bindsym $mod+w exec firefox
