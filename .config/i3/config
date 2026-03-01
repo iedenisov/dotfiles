@@ -90,7 +90,7 @@ bindsym $mod+Return exec alacritty --config-file ~/.config/alacritty/alacritty.t
 bindsym $mod+shift+Return exec alacritty --config-file ~/.config/alacritty/alacritty_static_colorscheme.toml
 
 # Start web-browser (Firefox)
-bindsym $mod+w exec firefox
+bindsym $mod+w exec firefox -P
 bindsym $mod+shift+w exec google-chrome-stable
 
 # Start Nemo (file browser)
